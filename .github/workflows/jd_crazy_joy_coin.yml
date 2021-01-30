@@ -1,8 +1,8 @@
-name: 疯狂的JOY挂机
+name: 疯狂的JOY挂机【不自动运行】
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 5,12,22 * * *' #每天6点、13点、20点启动任务，每次任务六小时挂机。
+  #schedule:
+    #- cron: '0 5,12,22 * * *' #每天6点、13点、20点启动任务，每次任务六小时挂机。
 jobs:
   build:
     runs-on: ubuntu-latest
