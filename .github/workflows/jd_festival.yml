@@ -1,8 +1,8 @@
-name: 神仙书院
+name: 京东手机年终奖[2021年2月8日结束]
 on:
   workflow_dispatch:
   schedule:
-    - cron: '05 16 * * *'
+    - cron: '10 16 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,9 +25,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【神仙书院】'
+      - name: '运行 【京东手机年终奖】'
         run: |
-          node jd_immortal.js
+          node jd_festival.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}

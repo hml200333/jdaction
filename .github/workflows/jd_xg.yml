@@ -1,8 +1,8 @@
-name: 神仙书院
+name: 小鸽【2021年2月19日结束】
 on:
   workflow_dispatch:
   schedule:
-    - cron: '05 16 * * *'
+    - cron: '30 3 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,9 +25,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【神仙书院】'
+      - name: '运行 【小鸽有礼】'
         run: |
-          node jd_immortal.js
+          node jd_jg.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
