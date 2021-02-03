@@ -1,4 +1,4 @@
-name: jd_superMarket
+name: 京小超
 on:
   workflow_dispatch:
   schedule:
