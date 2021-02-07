@@ -1,8 +1,8 @@
-name: 集鞭炮赢京豆
+name: 获取互助码
 on:
   workflow_dispatch:
   schedule:
-    - cron: '10 0,13 * * *'
+    - cron: '30 23 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,9 +25,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【鞭炮赢京豆】'
+      - name: '运行 【获取互助码】'
         run: |
-          node jd_firecrackers.js
+          node jd_get_share_code.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}

@@ -1,8 +1,8 @@
-name: 京东手机年终奖[2021年2月8日结束]
+name: 小鸽有礼2
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '10 16 * * *'
+    - cron: '30 23 * * *'
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,19 +25,18 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东手机年终奖】'
+      - name: '运行 【小鸽有礼2】'
         run: |
-          node jd_festival.js
+          node jd_xgyl.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
+          UN_SUBSCRIBES: ${{ secrets.UN_SUBSCRIBES }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
-          BARK_SOUND: ${{ secrets.BARK_SOUND }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          BARK_SOUND: ${{ secrets.BARK_SOUND }}
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
-          QQ_SKEY: ${{ secrets.QQ_SKEY }}
-          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}

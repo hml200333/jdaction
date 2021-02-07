@@ -1,8 +1,8 @@
-name: 京东压岁钱[2021-2-11截止]
+name: 宠汪汪偷好友积分与狗粮
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0,4 * * *'
+    - cron: '0 23,0,1,2,3 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,9 +25,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东压岁钱】'
+      - name: '运行 【宠汪汪偷好友积分与狗粮】'
         run: |
-          node jd_newYearMoney.js
+          node jd_joy_steal.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
