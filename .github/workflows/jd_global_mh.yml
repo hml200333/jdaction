@@ -1,8 +1,8 @@
-name: 京东家庭号
+name: 京东国际盲盒
 on:
   workflow_dispatch:
   schedule:
-    - cron: '41 * * * *'
+    - cron: '0 1,4,12,13 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,9 +25,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东家庭号】'
+      - name: '运行 【京东国际盲盒】'
         run: |
-          node jd_family.js
+          node jd_global_mh.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
