@@ -1,8 +1,8 @@
-name: 京东直播
+name: 美丽研究员
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 0,1,2 * * *'
+    - cron: '1 4,11,23 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,9 +25,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东直播】'
+      - name: '运行 【美丽研究员】'
         run: |
-          node jd_live.js
+          node jd_beauty.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
@@ -39,4 +39,5 @@ jobs:
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
-          JD_818_SHAREID_NOTIFY: ${{ secrets.JD_818_SHAREID_NOTIFY }}
+          QQ_SKEY: ${{ secrets.QQ_SKEY }}
+          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
