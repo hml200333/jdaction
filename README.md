@@ -7,7 +7,7 @@
 ## 使用说明
 1. fork此仓库创建自己仓库.
 2. 自己仓库 Settings - Secrets - New repository secret 新增三个secret <br> 
-   2.1 JD账户cooke，必填，一行一个（注：获取后不要退出登录账号，退出时cookie即时失效）<br> 
+   2.1 JD账户cooke，必填，一行一个（注：获取后不要退出登录账号，退出时cookie即时失效，获取后注意删除中间空格）<br> 
    <strong><span style="color:#E53333;">Name</span></strong>：JD_COOKIE    <br>           <strong><span style="color:#E53333;">Value</span></strong>：京东cookie值 [获取JDcookie教程](https://www.bilibili.com/read/cv7597205/)<br> 
     <br> 
    2.2 server酱消息推送，非必填
